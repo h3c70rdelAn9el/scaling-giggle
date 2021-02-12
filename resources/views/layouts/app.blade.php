@@ -47,7 +47,7 @@
         </a>
       </li>
       <li class="p-2">
-        <a href="/post">
+        <a href="{{ route('register') }}">
           Register
         </a>
       </li>
