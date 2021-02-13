@@ -36,26 +36,30 @@
       </li>
     </ul>
     <ul class="flex items-center text-white">
-      <li class="p-2">
-        <a href="/">
-          Arch Stanton
-        </a>
-      </li>
-      <li class="p-2">
-        <a href="/dashboard">
-          Login
-        </a>
-      </li>
-      <li class="p-2">
-        <a href="{{ route('register') }}">
-          Register
-        </a>
-      </li>
-      <li class="p-2">
-        <a href="/post">
-          Logout
-        </a>
-      </li>
+      @auth
+        <li class="p-2">
+          <a href="/">
+            Arch Stanton
+          </a>
+        </li>
+        <li class="p-2">
+          <a href="/post">
+            Logout
+          </a>
+        </li>
+      @endauth
+      @guest
+        <li class="p-2">
+          <a href="/login">
+            Login
+          </a>
+        </li>
+        <li class="p-2">
+          <a href="{{ route('register') }}">
+            Register
+          </a>
+        </li>
+      @endguest
     </ul>
   </nav>
   @yield('content')
