@@ -25,7 +25,7 @@
         </a>
       </li>
       <li class="p-2">
-        <a href="/dashboard">
+        <a href="{{ route('dashboard') }}">
           Dashboard
         </a>
       </li>
@@ -39,7 +39,7 @@
       @auth
         <li class="p-2">
           <a href="/">
-            Arch Stanton
+            {{ auth()->user()->name }}
           </a>
         </li>
         <li class="p-2">
