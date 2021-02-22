@@ -30,7 +30,7 @@
         </a>
       </li>
       <li class="p-2">
-        <a href="/post">
+        <a href="{{ route('posts') }}">
           Posts
         </a>
       </li>
@@ -48,7 +48,6 @@
             <button type="submit">
               Logout
             </button>
-
           </form>
 
         </li>
