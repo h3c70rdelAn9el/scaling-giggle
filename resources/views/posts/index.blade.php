@@ -35,6 +35,10 @@
             </p>
           </div>
         @endforeach
+        
+        {{ $posts->links() }}
+        
+
       @else
         <p>User has no posts</p>
       @endif
