@@ -33,6 +33,24 @@
             <p class="mb-2">
               {{ $post->body }}
             </p>
+
+            {{-- likes --}}
+            <div class="flex items-center">
+              @if (!$post->likedBy(auth()->user()))
+                <form action="{{ route('posts.likes', $post->id) }}" method="post" class="mr-1">
+                  @csrf
+                  <button type="submit" class="text-blue-600">Like</button>
+                </form>
+              @else
+                <form action="{{ route('posts.likes', $post->id) }}" method="post" class="mr-1 ml-2">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="text-blue-600">Unlike</button>
+                </form>
+              @endif
+
+              <span class="text-sm ml-4">{{ $post->likes->count() }} {{ Str::plural('like', $post->likes->count()) }}</span>
+            </div>
           </div>
         @endforeach
         
