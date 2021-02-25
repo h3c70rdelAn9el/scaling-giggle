@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## simple laravel blog/thing with vue
+
+going off a laravel tutorial from traversy media, i'm doing this for learning and getting more practice building laravel apps, as it is, a wonderful backend framework. styled with awesome tailwind.  
+will install vue, to be able to seperate components.  and well.. it is...vue!
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
