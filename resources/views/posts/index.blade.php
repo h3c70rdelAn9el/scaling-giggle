@@ -26,7 +26,7 @@
       @if ($posts->count())
         @foreach ($posts as $post)
           <div class="mb-4">
-            <a href="" class="font-bold">
+            <a href="{{ route('users.posts', $post->user) }}" class="font-bold">
               {{ $post->user->name }}
             </a><span class="text-sm text-gray-600">{{ $post->created_at->toFormattedDateString() }}</span>
             <p class="mb-2">
