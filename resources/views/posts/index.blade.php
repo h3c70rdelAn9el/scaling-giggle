@@ -29,10 +29,18 @@
             <a href="" class="font-bold">
               {{ $post->user->name }}
             </a><span class="text-sm text-gray-600">{{ $post->created_at->toFormattedDateString() }}</span>
-
             <p class="mb-2">
               {{ $post->body }}
             </p>
+
+            {{-- delete post --}}
+            @can('delete', $post)
+              <form action="{{ route('posts.destroy', $post) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="text-red-500">Delete</button>
+              </form>
+            @endcan
 
             {{-- likes --}}
             <div class="flex items-center">
