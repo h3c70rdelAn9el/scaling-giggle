@@ -5,9 +5,10 @@
   <a href="{{ route('users.posts', $post->user) }}" class="font-bold">
     {{ $post->user->name }}
   </a><span class="text-sm text-gray-600">{{ $post->created_at->toFormattedDateString() }}</span>
-  <p class="mb-2">
+  <p class="mb-1">
     {{ $post->body }}
   </p>
+  <a href="{{ route('posts.show', $post) }}" class="text-xs mb-2">Read more...</a>
 
   {{-- delete post --}}
   @can('delete', $post)
