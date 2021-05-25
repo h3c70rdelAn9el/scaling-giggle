@@ -1,7 +1,8 @@
 TODO
 
-[] style all pages!
-[] style posts page
+[x] background-image
+[x] style all pages!
+[x] style posts page
   [] add sidebar with users
     [] add tags after created
 
