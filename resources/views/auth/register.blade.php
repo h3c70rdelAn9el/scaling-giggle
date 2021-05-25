@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="flex justify-center">
-    <div class="w-4/12 bg-gray-300 p-6 shadow-lg rounded-lg">
-      <h1 class="text-4xl mb-2 text-center">Register</h1>
-      <form action="{{ route('register') }}" method="post">
+  <div class="flex justify-center mx-12 my-12">
+    <div class="sm:w-8/12 bg-background p-6 shadow-lg rounded-lg">
+      <h1 class="text-4xl mb-2 text-center text-content">Register</h1>
+      <form action="{{ route('register') }}" method="post" class="text-black">
         @csrf
         <div class="mb-4">
           <label for="name" class="sr-only">Name</label>
@@ -18,7 +18,7 @@
 
         <div class="mb-4">
           <label for="username" class="sr-only">Username</label>
-          <input type="text" name="username" id="username" placeholder="User Name" class="bg-gray-200 border-2 w-full p-3 rounded-lg @error('username') border-red-500 @enderror" value="{{ old('username') }}">
+          <input type="text" name="username" id="username" placeholder="Username" class="bg-gray-200 border-2 w-full p-3 rounded-lg @error('username') border-red-500 @enderror" value="{{ old('username') }}">
           @error('username')
             <div class="text-red-500 mt-2 text-sm">
               {{ $message }}
@@ -53,7 +53,7 @@
         </div>
 
         <div class="flex justify-center">
-          <button type="submit" class="bg-blue-500 shadow-lg text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700">Register</button>
+          <button type="submit" class="bg-main shadow-lg text-content px-4 py-3 rounded-lg font-medium hover:bg-body">Register</button>
         </div>
       </form>
     </div>

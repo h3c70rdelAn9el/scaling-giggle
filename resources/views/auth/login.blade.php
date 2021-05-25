@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="flex justify-center">
-    <div class="w-4/12 bg-gray-300 p-6 shadow-lg rounded-lg">
+  <div class="flex justify-center mx-12 my-12">
+    <div class="sm:w-8/12 bg-background p-6 shadow-lg rounded-lg">
       @if (session('status'))
-        <div class="bg-red-500 p-4 rounded-lg mb-6 text-white text-center">
+        <div class="bg-red-500 p-4 rounded-lg mb-6 text-content text-center">
           {{ session('status') }}
         </div>
       @endif
 
       <h1 class="text-4xl mb-2 text-center">Login</h1>
-      <form action="{{ route('login') }}" method="post">
+      <form action="{{ route('login') }}" method="post" class="text-black">
         @csrf
         <div class="mb-4">
           <label for="email" class="sr-only">Email</label>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="flex justify-center">
-          <button type="submit" class="bg-blue-500 shadow-lg text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700">Login</button>
+          <button type="submit" class="bg-main shadow-lg text-content px-4 py-3 rounded-lg font-medium hover:bg-body">Login</button>
         </div>
       </form>
     </div> 

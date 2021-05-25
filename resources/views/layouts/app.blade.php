@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="text-content">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,9 @@
       }
   </style>
 </head>
-<body class="bg-gray-200">
-  <nav class="p-6 mb-3 bg-blue-900 flex justify-between">
-    <ul class="flex items-center text-white">
+<body class="bg-body flex flex-col min-h-screen">
+  <nav class="p-6 bg-main flex justify-between">
+    <ul class="flex items-center text-content">
       <li class="p-2">
         <a href="/">
           Home
@@ -35,7 +35,7 @@
         </a>
       </li>
     </ul>
-    <ul class="flex items-center text-white">
+    <ul class="flex items-center">
       @auth
         <li class="p-2">
           <a href="/">
@@ -66,6 +66,14 @@
       @endguest
     </ul>
   </nav>
-  @yield('content')
+  
+  <div class="flex-grow">
+    @yield('content')
+  </div>
+
+  <footer class="h-8 bg-black text-content">
+    <p>Photo by <a href="https://unsplash.com/@inteligencia_eco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nacho Fernández</a> on <a href="https://unsplash.com/s/photos/straight-razor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
+  </footer>
 </body>
 </html>
